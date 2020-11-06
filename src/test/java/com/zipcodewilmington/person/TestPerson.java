@@ -83,6 +83,20 @@ public class TestPerson {
     }
 
     @Test
+    public void testSetJob() {
+        // Given
+        Person person = new Person();
+        String expected = "Carpenter";
+
+        // When
+        person.setJob(expected);
+        String actual = person.getJob();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testSetAge() {
         // Given
         Person person = new Person();
@@ -93,6 +107,62 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetCars() {
+        // Given
+        Person person = new Person();
+        Integer expected = 2;
+
+        // When
+        person.setCars(expected);
+
+        // Then
+        Integer actual = person.getCars();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetIphone() {
+        // Given
+        Person person = new Person();
+        boolean expected = true;
+
+        // When
+        person.setIphone(expected);
+
+        // Then
+        Boolean actual = person.getIphone();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetAndroid() {
+        // Given
+        Person person = new Person();
+        Boolean expected = false;
+
+        // When
+        person.setAndroid(expected);
+
+        // Then
+        Boolean actual = person.getAndroid();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetParent() {
+        // Given
+        Person person = new Person();
+        boolean expected = true;
+
+        // When
+        person.setParent(expected);
+
+        // Then
+        Boolean actual = person.getParent();
         Assert.assertEquals(expected, actual);
     }
 }
