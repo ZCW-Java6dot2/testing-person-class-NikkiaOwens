@@ -12,6 +12,11 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
+        String expectedJob = "";
+        Integer expectedCars = Integer.MAX_VALUE;;
+        Integer expectedIphone = Integer.MAX_VALUE;;
+        Integer expectedAndroid = Integer.MAX_VALUE;
+        Integer expectedWeight = Integer.MAX_VALUE;;
 
         // When
         Person person = new Person();
@@ -19,8 +24,18 @@ public class TestPerson {
         // Then
         String actualName = person.getName();
         Integer actualAge = person.getAge();
+        String actualJob = person.getJob();
+        Integer actualCars = person.getCars();
+        Integer actualIphone = person.getIphone();;
+        Integer actualAndroid = person.getAndroid();
+        Integer actualWeight = person.getWeight();;
 
         Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedJob, actualJob);
+        Assert.assertEquals(expectedCars, actualCars);
+        Assert.assertEquals(expectedIphone, actualIphone);
+        Assert.assertEquals(expectedAndroid, actualAndroid);
+        Assert.assertEquals(expectedWeight, actualWeight);
         Assert.assertEquals(expectedAge, actualAge);
     }
 
@@ -128,13 +143,13 @@ public class TestPerson {
     public void testSetIphone() {
         // Given
         Person person = new Person();
-        boolean expected = true;
+        int expected = 1;
 
         // When
         person.setIphone(expected);
 
         // Then
-        Boolean actual = person.getIphone();
+        int actual = person.getIphone();
         Assert.assertEquals(expected, actual);
     }
 
@@ -142,13 +157,13 @@ public class TestPerson {
     public void testSetAndroid() {
         // Given
         Person person = new Person();
-        Boolean expected = false;
+        int expected = 5;
 
         // When
         person.setAndroid(expected);
 
         // Then
-        Boolean actual = person.getAndroid();
+        int actual = person.getAndroid();
         Assert.assertEquals(expected, actual);
     }
 
@@ -156,13 +171,13 @@ public class TestPerson {
     public void testSetParent() {
         // Given
         Person person = new Person();
-        boolean expected = true;
+        int expected = 5;
 
         // When
-        person.setParent(expected);
+        person.setWeight(expected);
 
         // Then
-        Boolean actual = person.getParent();
-        Assert.assertEquals(expected, actual);
+       int actual = person.getWeight();
+        Assert.assertEquals(expected , actual);
     }
 }

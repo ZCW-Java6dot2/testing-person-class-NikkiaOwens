@@ -9,15 +9,20 @@ public class Person {
 
     private String job;
     private int cars;
-    private boolean iphone;
-    private boolean android;
-    private boolean parent;
+    private int iphone;
+    private int android;
+    private int weight;
 
     public Person() {
-    this.name = "";
-    this.age = Integer.MAX_VALUE;
-    }
+        this.name = "";
+        this.age = Integer.MAX_VALUE;
+        this.job = "";
+        this.cars = Integer.MAX_VALUE;
+        this.iphone = Integer.MAX_VALUE;
+        this.android = Integer.MAX_VALUE;
+        this.weight = Integer.MAX_VALUE;
 
+    }
 
 
 
@@ -49,10 +54,10 @@ public class Person {
     public int getCars() {
         return cars;
     }
-    public void setIphone(boolean iphone) {
+    public void setIphone(int iphone) {
         this.iphone = iphone;
     }
-    public boolean getIphone(){
+    public int getIphone(){
         return iphone;
     }
     public void setName(String name) {
@@ -72,19 +77,19 @@ public class Person {
         return age;
     }
 
-    public void setAndroid(Boolean android) {
+    public void setAndroid(int android) {
         this.android = android;
     }
 
-    public boolean getAndroid() {
+    public int getAndroid() {
         return android;
     }
 
-    public Boolean getParent() {
-        return parent;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setParent(boolean parent) {
-        this.parent = parent;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }
